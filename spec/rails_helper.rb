@@ -21,4 +21,6 @@ RSpec.configure do |config|
 
   config.include Devise::Test::ControllerHelpers, type: :ControllerHelpers
   config.include Warden::Test::Helpers
+
+  Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 end
